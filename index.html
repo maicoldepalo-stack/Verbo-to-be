@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verbo to be</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <p class="eyebrow">English grammar</p>
+        <h1>Verbo to be</h1>
+        <p class="subtitle">
+          Learn the forms of <strong>to be</strong> and practice with quick examples.
+        </p>
+      </header>
+
+      <section class="grid" aria-label="Verb forms">
+        <article class="card accent">
+          <span class="label">I</span>
+          <strong>am</strong>
+        </article>
+        <article class="card">
+          <span class="label">You</span>
+          <strong>are</strong>
+        </article>
+        <article class="card">
+          <span class="label">He / She / It</span>
+          <strong>is</strong>
+        </article>
+        <article class="card">
+          <span class="label">We / You / They</span>
+          <strong>are</strong>
+        </article>
+      </section>
+
+      <section class="practice panel">
+        <div class="practice-header">
+          <h2>Quick practice</h2>
+          <div class="score" aria-live="polite">Score: <span id="score">0</span></div>
+        </div>
+
+        <p id="question" class="question">Choose the correct form:</p>
+
+        <div class="answers" id="answers" aria-label="Answer choices"></div>
+
+        <button id="next-btn" class="next-btn" type="button">Next question</button>
+      </section>
+
+      <section class="examples panel">
+        <h2>Example sentences</h2>
+        <ul id="examples-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
