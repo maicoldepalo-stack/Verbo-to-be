@@ -1,58 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verbo to be</title>
+    <title>Il Tempio del Verbo To Be - Arcade Edition</title>
+    <meta
+      name="description"
+      content="Gioco arcade per imparare il verbo to be con domande veloci e sfide del tempio."
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="container">
-      <header class="hero">
-        <p class="eyebrow">English grammar</p>
-        <h1>Verbo to be</h1>
-        <p class="subtitle">
-          Learn the forms of <strong>to be</strong> and practice with quick examples.
-        </p>
+    <div class="scene">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Arcade Edition</p>
+          <h1>Il Tempio del Verbo To Be</h1>
+        </div>
+        <div class="stats">
+          <span>Punteggio: <strong id="score">0</strong></span>
+          <span>Vite: <strong id="lives">3</strong></span>
+          <span>Livello: <strong id="level">1</strong></span>
+        </div>
       </header>
 
-      <section class="grid" aria-label="Verb forms">
-        <article class="card accent">
-          <span class="label">I</span>
-          <strong>am</strong>
-        </article>
-        <article class="card">
-          <span class="label">You</span>
-          <strong>are</strong>
-        </article>
-        <article class="card">
-          <span class="label">He / She / It</span>
-          <strong>is</strong>
-        </article>
-        <article class="card">
-          <span class="label">We / You / They</span>
-          <strong>are</strong>
-        </article>
-      </section>
+      <main class="game-layout">
+        <section class="panel mission">
+          <p class="label">Missione</p>
+          <h2 id="mission-text">Sblocca la porta del tempio scegliendo la forma corretta del verbo to be.</h2>
+        </section>
 
-      <section class="practice panel">
-        <div class="practice-header">
-          <h2>Quick practice</h2>
-          <div class="score" aria-live="polite">Score: <span id="score">0</span></div>
-        </div>
+        <section class="panel question-panel">
+          <p class="label">Domanda</p>
+          <h3 id="question">Completa la frase:</h3>
+          <div id="sentence" class="sentence">I ___ happy today.</div>
+          <div id="answers" class="answers" aria-label="Risposte"></div>
+          <button id="next-btn" class="next-btn" type="button">Prossima sfida</button>
+        </section>
 
-        <p id="question" class="question">Choose the correct form:</p>
-
-        <div class="answers" id="answers" aria-label="Answer choices"></div>
-
-        <button id="next-btn" class="next-btn" type="button">Next question</button>
-      </section>
-
-      <section class="examples panel">
-        <h2>Example sentences</h2>
-        <ul id="examples-list"></ul>
-      </section>
-    </main>
+        <aside class="panel rules">
+          <p class="label">Regole del tempio</p>
+          <ul>
+            <li>Ogni risposta corretta aggiunge punti.</li>
+            <li>Ogni errore costa una vita.</li>
+            <li>Raggiungi 12 punti per sconfiggere il guardiano.</li>
+          </ul>
+        </aside>
+      </main>
+    </div>
 
     <script src="script.js"></script>
   </body>
